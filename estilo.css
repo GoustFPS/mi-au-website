@@ -1,41 +1,8 @@
-* {}
 
-header {
-    text-align: left;
-    font-size: 30px;
-    color: #000000;
-    background-color: #991e459a;
-    padding: 20px;
-
-}
-
-header h1 {
-    margin: 0;
-
-}
-body {
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    p {
-        color: black;
-    }
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-}
-
-nav {
-    background-color: #C1E4EC;
-    color: #000000;
-    font-size: 16px;
-    padding: 10px;
-
-}
 
 nav ul {
     list-style: none;
-    /* Remove marcadores de lista */
-    padding: 0;
+    ;
 }
 
 nav li {
@@ -44,32 +11,100 @@ nav li {
 
 }
 
-nav a {
+ a {
     text-decoration: none;
-    margin: 10px; 5px; 10px; 5px;
-    color: #000000;
+    
     }
 
 
-main {
-    padding: 10px;
-}
-aside {
-    background-color: #D3E491;
-    padding: 20px;
-}
+
 
 footer {
-    background-color: #991e459a;
-    padding: 20px;
-    text-align: center;
-    font-size: 12px; 
-    color: white;
+    background-color: #333333;
+
+    
+
+}
+header {
+    
 }
 
-footer h2 {
-    margin: 0;
-    }
 
-    display: block;
-    margin-top: 10px;
+.header {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #37AFAA;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.headernav{
+    padding-left: 10.0rem;
+    padding-right: 10.0rem;
+    border: 2 px solid #F55D6F
+
+
+}
+.a-menu {
+    color: #FFFFFF;
+    font-weight: 600;
+    
+    font-size: 1.5rem;
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
+
+
+}
+
+.menu2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.catdogban {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 10px;
+    
+}
+.video {
+    border:  5px solid #F55D6F;
+    border-radius: 10px;
+}
+.midimage {
+    padding-bottom: 104px;
+}
+
+.a-menu2 {
+    color: #F55D6F;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;  
+    text-decoration: none;
+    padding-left: 94px;
+    padding-right: 94px;
+    font-size: 1.3rem;
+}
+.navfooter {
+    display: flex;
+}
+.ulfooter {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.footer-p {
+    color: white;
+    font-weight: 800;
+    padding-left: 34px;
+    padding-right: 34px;
+}
+.a-footer {
+    
+color: white;
+font-weight: 800;
+}
