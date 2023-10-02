@@ -1,34 +1,19 @@
-
-
 nav ul {
     list-style: none;
-    ;
 }
 
 nav li {
     display: inline;
     margin-right: 10px;
-
 }
 
- a {
+a {
     text-decoration: none;
-    
-    }
-
-
-
+}
 
 footer {
     background-color: #333333;
-
-    
-
 }
-header {
-    
-}
-
 
 .header {
     font-family: sans-serif;
@@ -38,37 +23,31 @@ header {
     justify-content: flex-start;
     align-items: center;
 }
+
 .headernav{
     padding-left: 10.0rem;
     padding-right: 10.0rem;
-    border: 2 px solid #F55D6F
-
-
 }
+
 .a-menu {
     color: #FFFFFF;
     font-weight: 600;
-    
     font-size: 1.5rem;
     padding-left: 2.0rem;
     padding-right: 2.0rem;
-
-
 }
 
 .menu2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
+
 .catdogban {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-top: 10px;
-    
 }
 
 .midimage {
@@ -85,9 +64,11 @@ header {
     padding-right: 94px;
     font-size: 1.3rem;
 }
+
 .navfooter {
     display: flex;
 }
+
 .ulfooter {
     display: inline-flex;
     justify-content: flex-end;
@@ -100,8 +81,8 @@ header {
     padding-left: 34px;
     padding-right: 34px;
 }
+
 .a-footer {
-    
 color: white;
 font-weight: 800;
 }

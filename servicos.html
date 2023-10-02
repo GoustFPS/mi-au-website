@@ -3,50 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Mi Au PetShop</title>
 </head>
-
 <body>
+    <style type="text/css">
+
+        @media (max-width: 450px){ /*Responsividade*/
+            .atendimento {
+                flex-direction: column;
+                max-width: 960px;
+                justify-content: center;
+            }
+
+        }
+
+
+        h1 {
+            color: #37AFAA;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .atendimento {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .atendimento ul {
+            background-color: #b7e6e3;
+            border-radius: 33px;
+            width: 235px;
+            height: 152px;
+            margin: 70px;
+        }
+
+        .atendimento li {
+            text-align: center;
+            margin: 0 50px 0 50px;
+            padding: 4px;
+        }
+
+        .container li { /*delivery*/
+            display: flex;
+            justify-content: center;
+            line-height: 55px;
+            margin-top: 40px;
+            text-align: justify;
+            background-color: #b7e6e3;
+            height: 62px;
+            border-radius: 33px;
+            font-weight: 500px;
+        }
+
+        .formulario li { 
+            list-style-type: none;
+            color: #37AFAA;
+            padding-left: 25%;
+            margin-top: 17px;
+        }
+
+        input {
+            background-color: #d1f8f5;
+            border-radius: 8px;
+            border: none;
+            width: 200px;
+            height: 25px;
+            margin-left: 3px;
+        }
+
+        button {
+            font-size: 16px;
+            border-radius: 14px;
+            border: none;
+            height: 30px;
+            width: 67px;
+            color: #08726d;
+            background-color: #a6e5e0;
+            margin-left: 95px;
+        }
+
+        </style>
+
     <header>
-        <img src="img/Logo .png" alt="logo">
-        <nav>
-            <ul>
-                    <a href="index.html">INÍCIO</a>
-                    <a href="aboutus.html">SOBRE NÓS</a>
-                    <a href="banho_e_tosa.html">BANHO E TOSA</a>
-                    <a href="servicos.html">SERVIÇOS</a>
-                    <a href="contato.html">CONTATO</a>
-            </ul>
-        </nav>
+        <div class="header">
+            <img src="img/logo.png" alt="logo" width="200" height="200">
+            <nav class="headernav">
+                <ul>
+                    <a class="a-menu" href="index.html">INÍCIO</a>
+                    <a class="a-menu" href="aboutus.html">SOBRE NÓS</a>
+                    <a class="a-menu" href="banho_e_tosa.html">BANHO E TOSA</a>
+                    <a class="a-menu" href="servicos.html">SERVIÇOS</a>
+                    <a class="a-menu" href="contato.html">CONTATO</a>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <section>
         <h1>Atendimento Veterinário</h1>
-        <img src="./img/img servicos/medica-com-gato.jpg" alt="Médica com gato" width="10%">
-        <ul>
-            <li>Pronto atendimento</li>
-            <li>Consultas de clínica geral</li>
-            <li>Vacinação</li>
-            <li>Castração</li>
-            <li>Remoção de tártaro</li>
-        </ul>
-        <img src="./img/img servicos/medica-com-cao.png" alt="Médica com cão" width="10%">
-        <p>MI AU Petshop conta também com atendimento especialista em felinos, como é recomendado pela American Association Feline Practitioners – AAFP, na qual temos certificação como Cat Friendly Practice categoria Gold (Ouro), que significa que temos um  ambiente cat friendly, isto é, um ambiente que respeita o comportamento do gato e reduz o estresse.</p>
-        <img src="./img/img servicos/catfriendly.png" alt="Certificado CatFriendly" width="5%">
+        <div class="atendimento">
+            <div><img src="./img/img servicos/medica-com-gato.jpg" alt="Médica com gato" width= 250px></div>
+            <div><ul style="list-style-type: none; padding: 0;">
+                <li>Pronto atendimento</li>
+                <li>Consultas de clínica geral</li>
+                <li>Vacinação</li>
+                <li>Castração</li>
+                <li>Remoção de tártaro</li></div>
+            <div><img src="./img/img servicos/medica-com-cao.png" alt="Médica com cão" width=250px></div>
+            </ul>
+        </div>
+        <p style="text-align: center;">MI AU Petshop conta também com atendimento especialista em felinos, como é recomendado pela American Association Feline Practitioners – AAFP, <br> na qual temos certificação como Cat Friendly Practice categoria Gold (Ouro),<br> que significa que temos um  ambiente cat friendly, isto é, um ambiente que respeita o comportamento do gato e reduz o estresse.</p>
+
+        <img src="./img/img servicos/catfriendly.png" alt="Certificado CatFriendly" width=150px style="padding-left: 46%;">
+        <hr width="90%">
     </section>
 
     <section>
         <h1>Delivery</h1>
-        <ul>
-            <li>Pague em até 12x sem juros</li>
-            <li>Peça pelo telefone e entregamos em menos de 2 horas</li>
-            <li>Frete grátis</li>
+        <img src="./img/img servicos/produtos.png" alt="Produtos" width="450px" align="right" style="padding-right: 445px; padding-bottom: 25px;">
+        <ul class="container" style="list-style-type: none;">
+            <li style="width: 260px; margin-left: 25%">Pague em até 12x sem juros</li>
+            <li style="width: 375px; margin-left: 22%">Peça pelo telefone e entregamos em menos de 2 horas</li>
+            <li style="width: 260px; margin-left: 25%">Frete grátis</li>
         </ul>
-        <img src="./img/img servicos/produtos.png" alt="Produtos" width="10%">
+        <hr width="90%">
     </section>
 
     <form>
-        <h2>Agende seu horário conosco!</h2>
-        <ul>
+        <h1>Agende seu horário conosco!</h1>
+        <img src="./img/img servicos/gato-atendente.png" alt="Gato no computador" width=350px align="right" style="padding-right: 23%;">
+        <ul class="formulario">
             <li> 
                 <label for="nomepet"><strong>Nome do Pet:</strong></label>
                 <input type="text" name="nomepet" id="nomepet" placeholder="Digite o nome do pet" required>
@@ -65,14 +153,16 @@
             </li>
             <li>
                 <label for="tel"><strong>Telefone:</strong></label>
-                <input type="tel" name="tel" id="tel" required>
+                <input type="tel" name="tel" id="tel"  required>
             </li>
             <li>
                 <label for="observacoes"><strong>Observações:</strong></label>
                 <input type="text" name="observacoes" id="observacoes" placeholder="Digite o motivo da consulta" required>
             </li>
+            <li>
+                <button><strong>Enviar</strong></button>
+            </li>
         </ul>
-        <img src="./img/img servicos/gato-atendente.png" alt="Gato no computador" width="10%">
     </form>
     <footer>
         <nav>
