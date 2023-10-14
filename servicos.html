@@ -9,8 +9,24 @@
 <body>
     <style type="text/css">
 
-        @media (max-width: 450px){ /*Responsividade*/
-            .atendimento {
+        @media (max-width: 480px){ /*Responsividade*/
+            .atendimento .container .formulario {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+        }
+            @media (min-width: 481px) and (max-width: 767px){ 
+            .atendimento .container .formulario {
+                flex-direction: column;
+                max-width: 960px;
+                justify-content: center;
+            }
+
+        }
+            @media (min-width: 768px) and (max-width: 991px){ 
+            .atendimento .container .formulario {
                 flex-direction: column;
                 max-width: 960px;
                 justify-content: center;
@@ -122,12 +138,14 @@
 
     <section>
         <h1>Delivery</h1>
-        <img src="./img/img servicos/produtos.png" alt="Produtos" width="450px" align="right" style="padding-right: 445px; padding-bottom: 25px;">
-        <ul class="container" style="list-style-type: none;">
-            <li style="width: 260px; margin-left: 25%">Pague em até 12x sem juros</li>
-            <li style="width: 375px; margin-left: 22%">Peça pelo telefone e entregamos em menos de 2 horas</li>
-            <li style="width: 260px; margin-left: 25%">Frete grátis</li>
-        </ul>
+        <img src="./img/img servicos/produtos.png" class="img" alt="Produtos" width=350px  align="right" style="padding-right: 23%;">
+        <div>
+            <ul class="container" style="list-style-type: none;">
+                <li style="width: 260px; margin-left: 25%">Pague em até 12x sem juros</li>
+                <li style="width: 375px; margin-left: 22%">Peça pelo telefone e entregamos em menos de 2 horas</li>
+                <li style="width: 260px; margin-left: 25%">Frete grátis</li>
+            </ul>
+        </div>
         <hr width="90%">
     </section>
 
