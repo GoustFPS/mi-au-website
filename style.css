@@ -33,8 +33,16 @@ footer {
     color: #FFFFFF;
     font-weight: 600;
     font-size: 1.5rem;
-    padding-left: 2.0rem;
-    padding-right: 2.0rem;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: justify;
+    background-color: rgb(255, 255, 255); /* Cor de fundo do botão */
+    border: none;
+    border-radius: 10px; /* Borda arredondada */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+    background-color:rgb(251, 97, 97); /* Cor de fundo ao passar o mouse sobre o botão */
+  
 }
 
 .menu2 {
@@ -67,6 +75,7 @@ footer {
 
 .navfooter {
     display: flex;
+    justify-content: space-between;
 }
 
 .ulfooter {
@@ -78,7 +87,7 @@ footer {
 .footer-p {
     color: white;
     font-weight: 800;
-    padding-left: 34px;
+    padding-left: 20px;
     padding-right: 34px;
 }
 
@@ -86,6 +95,15 @@ footer {
 color: white;
 font-weight: 800;
 }
+
+  
+  @media (max-width: 768px) {
+    .navfooter {
+      flex-direction: column;
+    }
+   
+  }
+  
 @media (max-width: 450px){ /*Responsividade*/
     .atendimento {
         flex-direction: column;
@@ -93,3 +111,4 @@ font-weight: 800;
         justify-content: center;
     }
 }
+
