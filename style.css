@@ -1,4 +1,11 @@
-
+p {
+  font-family:roboto;
+  font-size: 16px; 
+  font-weight: normal; 
+  color:black; 
+  line-height: 1.5;
+ 
+}
 nav ul {
     list-style: none;
 }
@@ -37,12 +44,12 @@ footer {
     padding: 10px 20px;
     display: inline-block;
     text-align: justify;
-    background-color: rgb(245, 197, 189); /* Cor de fundo do botão */
+    background-color: rgb(245, 197, 189); 
     border: none;
-    border-radius: 22px; /* Borda arredondada */
+    border-radius: 22px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave na cor de fundo */
-    background-color: #37AFAA; /* Cor de fundo ao passar o mouse sobre o botão */
+    transition: background-color 0.3s;
+    background-color: #37AFAA; /
   
 }
 
