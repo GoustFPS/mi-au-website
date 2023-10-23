@@ -30,18 +30,18 @@ footer {
 }
 
 .a-menu {
-    color: #FFFFFF;
+    color:white;
     font-weight: 600;
     font-size: 1.5rem;
     padding: 10px 20px;
     display: inline-block;
     text-align: justify;
-    background-color: rgb(255, 255, 255); /* Cor de fundo do botão */
+    background-color: rgb(245, 197, 189); /* Cor de fundo do botão */
     border: none;
-    border-radius: 5pxpx; /* Borda arredondada */
+    border-radius: 22px; /* Borda arredondada */
     cursor: pointer;
     transition: background-color 0.3s; /* Transição suave na cor de fundo */
-    background-color:rgb(244, 102, 102); /* Cor de fundo ao passar o mouse sobre o botão */
+    background-color: #37AFAA; /* Cor de fundo ao passar o mouse sobre o botão */
   
 }
 
