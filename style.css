@@ -110,7 +110,6 @@ font-weight: 800;
     .navfooter {
       flex-direction: column;
     }
-   
   }
   
 @media (max-width: 450px){ /*Responsividade*/
