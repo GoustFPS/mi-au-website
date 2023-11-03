@@ -2,31 +2,31 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./servicos.js" defer></script>
+    <script src="./servicos.js" defer> </script>
     <title>Mi Au PetShop</title>
 </head>
 <body>
     <style type="text/css">
 
-            @media (min-width: 481px) and (max-width: 767px){ 
-            .atendimento .container .formulario {
-                flex-direction: column;
-                max-width: 960px;
-                justify-content: center;
-            }
-
+    @media (min-width: 481px) and (max-width: 767px){ 
+        .atendimento .container .formulario{
+            display: flex;
+            flex-direction: column;
+            max-width: 960px;
+            justify-content: center;
         }
-            @media (min-width: 768px) and (max-width: 991px){ 
-            .atendimento .container .formulario {
-                flex-direction: column;
-                max-width: 960px;
-                justify-content: center;
-            }
-
+    }
+    @media (min-width: 768px) and (max-width: 991px){ 
+        .atendimento .container .formulario{
+            display: flex;
+            flex-direction: column;
+            max-width: 960px;
+            justify-content: center;
         }
-
+    }
 
         h1 {
             color: #37AFAA;
@@ -64,6 +64,42 @@
             height: 62px;
             border-radius: 33px;
             font-weight: 500px;
+        }
+
+        /* -------- Formulário-------- */
+        .helper-text {
+        display: none;
+        font-size: .8rem;
+        color: darkred;
+        }
+
+        .required-popup::after {
+        content: "Campo obrigatório";
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #DFDFDF;
+        font-size: .65rem;
+        padding: .2rem .3rem;
+        width: auto;
+        display: block;
+        background-color: #202020;
+        }
+
+        input.error {
+        border: solid 2px #992020;
+        background-color: #CCBBBB;
+        color: #662020;
+        }
+
+        input.correct {
+        background-color: #BBCCBB;
+        border: solid 2px #206620;
+        color: #206620;
+        }
+
+        .visible {
+        display: block;
         }
 
         .formulario li { 
@@ -152,37 +188,43 @@
         <hr width="90%">
     </section>
 
-    <form>
+    <form action="" class="formulario">
         <h1>Agende seu horário conosco!</h1>
         <img src="./img/img servicos/gato-atendente.png" alt="Gato no computador" width=350px align="right" style="padding-right: 23%;">
         <br>
-        <ul class="formulario">
+        <ul >
             <li> 
-                <label for="nomepet"><strong>Nome do Pet:</strong></label>
-                <input type="text" name="nomepet" id="nomepet" placeholder="Digite o nome do pet" required>
+                <label for="usernamePet" ><strong>Nome do Pet:</strong></label>
+                <input type="text" name="usernamePet" id="usernamePet" class="label" placeholder="Digite o nome do pet" required>
+                <p id="usernamepet-helper" class="helper-text">Mensagem de ajuda</p>
             </li>
             <li>
-                <label for="nometutor"><strong>Nome do Tutor:</strong></label>
-                <input type="text" name="nometutor" id="nometutor" placeholder="Digite seu nome" required>
+                <label for="usernameTutor"><strong>Nome do Tutor:</strong></label>
+                <input type="text" name="usernameTutor" id="usernameTutor" class="label" placeholder="Digite seu nome" minlength="3" required>
+                <p id="usernametutor-helper" class="helper-text">Mensagem de ajuda</p>
             </li>
             <li>
-                <label for="date"><strong>Data:</strong></label>
-                <input type="date" name="date" id="date" required>
+                <label for="date" ><strong>Data:</strong></label>
+                <input type="date" name="date"  id="date" class="label" required>
+                <p id="date-helper" class="helper-text">Mensagem de ajuda</p>
             </li>
             <li>
-                <label for="time"><strong>Horário:</strong></label>
-                <input type="time" name="time" id="time" required>
+                <label for="time" ><strong>Horário:</strong></label>
+                <input type="time" name="time"  id="time" class="label" required>
+                <p id="date-helper" class="helper-text">Mensagem de ajuda</p>
             </li>
             <li>
-                <label for="tel"><strong>Telefone:</strong></label>
-                <input type="tel" name="tel" id="tel"  required>
+                <label for="number" ><strong>Telefone:</strong></label>
+                <input type="number" name="number" id="number" class="label"  minlength="10"  required>
+                <p id="number-helper" class="helper-text">Mensagem de ajuda</p>
             </li>
             <li>
                 <label for="observacoes"><strong>Observações:</strong></label>
                 <input type="text" name="observacoes" id="observacoes" placeholder="Digite o motivo da consulta" required>
+                <p id="number-helper" class="helper-text">Mensagem de ajuda</p>
             </li>
             <li>
-                <button><strong>Enviar</strong></button>
+                <button type="submit"><strong>Enviar</strong></button>
             </li>
         </ul>
     </form>
