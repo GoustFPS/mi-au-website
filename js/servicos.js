@@ -1,7 +1,26 @@
-let form = document.querySelector('form');
-console.log(form)
-let numberInput = document.getElementById('number');
-console.log(numberInput)
+//Elementos da DOM
+
+// Input nome do pet
+let usernameInput = document.getElementById("usernamePet")
+console.log(usernameInput)
+let usernameLabel = document.querySelector('label[for="usernamePet"]');
+console.log(usernameLabel)
+// Input nome do tutor
+let inputTutor = document.getElementById("usernameTutor")
+console.log(usernameTutor)
+let usernameLabelTutor = document.querySelector('label[for="usernameTutor"]');
+console.log(usernameLabelTutor)
+// Input data
+let inputDate = document.getElementById("date")
+console.log(inputDate)
+let labelDate = document.querySelector('label[for="date"]');
+console.log(labelDate)
+// Input horário
+let inputTime = document.getElementById("time")
+console.log(inputTime)
+let labelTime = document.querySelector('label[for="time"]');
+console.log(labelTime)
+
 
 function mostrarPopup(input, label){
     // Mostrar popup de campo obrigatório
@@ -13,6 +32,9 @@ function mostrarPopup(input, label){
         label.classList.remove("required-popup")
 })
 } 
+//Aplicando a função
+mostrarPopup(usernameInput, usernameLabel)
+
 
     // Validador de telefone
 numberInput.addEventListener("change", function(e){
