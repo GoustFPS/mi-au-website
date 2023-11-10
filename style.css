@@ -14,6 +14,17 @@ a {
 footer {
     background-color: #333333;
 }
+body {
+  cursor: none;
+}
+.cursor {
+  pointer-events: none;
+  display: block;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  background-image: url(img/cursor.png);
+}
 
 .header {
   background-color: #37AFAA;
