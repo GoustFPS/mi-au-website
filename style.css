@@ -9,6 +9,7 @@ nav li {
 
 a {
     text-decoration: none;
+    
 }
 
 footer {
@@ -124,14 +125,6 @@ font-weight: 800;
     }
   }
   
-@media (max-width: 450px){ /*Responsividade*/
-    .atendimento {
-        flex-direction: column;
-        max-width: 960px;
-        justify-content: center;
-    }
-}
-
 /* Estilos para a seção da galeria */
 .gallery-section {
     background-color: #f2f2f2;
