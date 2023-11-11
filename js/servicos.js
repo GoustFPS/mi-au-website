@@ -41,7 +41,7 @@ numberInput.addEventListener("change", function(e){
     let valor = e.target.value
     console.log(valor)
     
-    if(valor.length < 10){
+    if(valor.length < 11){
         //Estilos dinamicos caso o valor não seja válido
         numberInput.classList.remove("correct")
         numberInput.classList.add("error")
