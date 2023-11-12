@@ -15,9 +15,11 @@ a {
 footer {
     background-color: #333333;
 }
-body {
+/*body {
   cursor: none;
-}
+}*/
+
+
 .cursor {
   pointer-events: none;
   display: block;

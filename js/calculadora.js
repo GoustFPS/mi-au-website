@@ -71,38 +71,53 @@ const data = [
        });    
   }
   
-  function cleanInputs() {
+  function cleanIputs()  {
     heightInput.value = "";
     weightInput.value = "";
-    imcNumber.className = "";
-    imcInfo.className = "";
   }
-
+  
   function validDigits(text) {
     return text.replace(/[^0-9,]/g, "");
   }
-  
+
+  function calcImc(height, weight) {
+    const imc = (weight / (height * height)).toFixed(1);
+    return imc;
+  }
 
   // Inicialização
- createTable(data);
+  createTable(data);
 
 
   // Eventos
 
+  [heightInput, weightInput].forEach((el) => {
+    el.addEventListener("input", (e) => {
+      const updatedValue = validDigits(e.target.value);
   
+      e.target.value = updatedValue;
+    });
+  });
+
   calcBtn.addEventListener("click", (e) => {
     e.preventDefault();
-  
-    const weight = +weightInput.value.replace(",", ".");
-    const height = +heightInput.value.replace(",", ".");
-    
-    
 
-  });
+    const weight = +weightInput.value.replace(",", ".")
+    const height = +heightInput.value.replace(",", ".")
+
+    if (!weight || !height) return;
     
+    const imc = calcImc(height, weight);
+    console.log(imc);
+
+  })
+
 
   clearBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-  
-    cleanInputs();
+    e.preventDefault(); 
+
+    cleanIputs();
   });
+  
+
+  
