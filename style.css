@@ -342,6 +342,19 @@ font-weight: 800;
   color: #db1912;
  }  
 
+ .container {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#cupom-container {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
 
   
 
