@@ -1,10 +1,10 @@
-// IMC DATA
+//IMC DATA//
 const data = [
     {
       min: 0,
       max: 18.4,
       classification: "Menor que 18,5",
-      info: "Magreza",
+      info: "Abaixo do peso",
       obesity: "0",
     },
     {
@@ -89,13 +89,20 @@ const data = [
 
   // Eventos
 
-  [heightInput, weightInput].forEach(() => {
+  
+  calcBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const weight = +weightInput.value.replace(",", ".");
+    const height = +heightInput.value.replace(",", ".");
+    
+    
 
   });
+    
 
   clearBtn.addEventListener("click", (e) => {
     e.preventDefault();
   
     cleanInputs();
   });
-
