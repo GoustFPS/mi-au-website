@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMCPET</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/calculadora.js" defer></script>
-    <script src="js/cursor.js"></script>
-    
-    
-    
+        
           
   </head>
   <body class="body-calc">
-    <div class="cursor"></div>
+     
       <div class="containercalc">
             <div id="calc-container">
                   <h2>IMCPET</h2>
+                  
                   <form id="imc-form">
                     <div class="forminputs">
                         <div class="form-control">
@@ -31,17 +28,19 @@
                           <label for="weigth">Peso:</label>
                           <input
                             type="text"
-                            name="weigth"
-                            id="weigth"
-                            placeholder="Exemplo em cm: 55,5"/>
+                            name="weight"
+                            id="weight"
+                            placeholder="Exemplo em Kg: 55,5"/>
                         </div>  
                     </div>
                     <div class="action-control">
                       <button class="btn-imc" id="calc-btn">Calcular</button>
                       <button class="btn-imc" id="clear-btn">Limpar</button>
-                      
+                                           
                     </div>
-                  </form>                 
+                    
+                  </form>
+                              
             </div>
             <div id="result-container"  class="hide">
               <p id="imc-number">O IMC do seu Pet é: <span></span></p>
@@ -57,10 +56,8 @@
               <button class="btn-imc" id="back-btn">Voltar</button>
             </div>
       </div>
-      <script src="js/calculadora.js"></script>
-     
-    
-
+      <script src="js/calculadora.js" defer></script>  
+      
   
   </body>
 </html>
