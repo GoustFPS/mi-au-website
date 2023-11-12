@@ -1,10 +1,10 @@
-// IMC DATA
+//IMC DATA//
 const data = [
     {
       min: 0,
       max: 18.4,
       classification: "Menor que 18,5",
-      info: "Magreza",
+      info: "Abaixo do peso",
       obesity: "0",
     },
     {
@@ -39,4 +39,70 @@ const data = [
 
   // Seleção de elementos
 
-  const imcTable = document.querySelector()
+  const imcTable = document.querySelector("#imc-table");
+
+  const heightInput = document.querySelector("#height");
+  const weightInput = document.querySelector("#weight");
+  const calcBtn = document.querySelector("#calc-btn");
+  const clearBtn = document.querySelector("#clear-btn");
+
+  //Funções
+
+  function createTable(data) {
+       data.forEach((item) => {
+           const div = document.createElement("div");
+           div.classList.add("table-data");
+
+           const classification = document.createElement("p");
+           classification.innerText = item.classification;
+
+           const info = document.createElement("p");
+           info.innerText = item.info;
+
+           const obesity = document.createElement("p");
+           obesity.innerText = item.obesity;
+
+           div.appendChild(classification);
+           div.appendChild(info);
+           div.appendChild(obesity); 
+           
+           imcTable.appendChild(div);
+
+       });    
+  }
+  
+  function cleanInputs() {
+    heightInput.value = "";
+    weightInput.value = "";
+    imcNumber.className = "";
+    imcInfo.className = "";
+  }
+
+  function validDigits(text) {
+    return text.replace(/[^0-9,]/g, "");
+  }
+  
+
+  // Inicialização
+ createTable(data);
+
+
+  // Eventos
+
+  
+  calcBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const weight = +weightInput.value.replace(",", ".");
+    const height = +heightInput.value.replace(",", ".");
+    
+    
+
+  });
+    
+
+  clearBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    cleanInputs();
+  });
