@@ -88,7 +88,7 @@ const data = [
   }
 
   function calcImc(height, weight) {
-    const imc = (weight / (height ** -2)).toFixed(1);
+    const imc = (weight / (height * height)).toFixed(1);
     return imc;
   }
 

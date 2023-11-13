@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ix2Bo4jAqDNK4Y/FOWImGOv7v7+AN2QhvB96Nc9suZU1fFpsirIsPRiiPcVjZbSvixiv2fX0jL5T4ZaLv63mkig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #ed6262;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cupom-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cadastro de Pet</h1>
+    <div class="container" id="main-container">
+      <a href="banho_e_tosa.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <form id="cadastroForm">
+      <label for="nome">Nome do Responsável:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="contato">Contato:</label>
+      <input type="text" id="contato" name="contato" required>
+      
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+      
+      <label for="nomePet">Nome do Pet:</label>
+      <input type="text" id="nomePet" name="nomePet" required>
+
+      <label for="especie">Espécie:</label>
+      <select id="especie" name="especie" required>
+        <option value="canino">Canino</option>
+        <option value="felino">Felino</option>
+      </select>
+
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo" required>
+        <option value="macho">Macho</option>
+        <option value="femea">Fêmea</option>
+      </select>
+
+      <label for="raca">Raça:</label>
+      <input type="text" id="raca" name="raca" required>
+
+      <label for="diaSemana">Dia da Semana:</label>
+      <select id="diaSemana" name="diaSemana" required>
+        <option value="segunda">Segunda-feira</option>
+        <option value="terca">Terça-feira</option>
+        <option value="quarta">Quarta-feira</option>
+        <option value="quinta">Quinta-feira</option>
+        <option value="sexta">Sexta-feira</option>
+        <option value="sabado">Sábado</option>
+        <option value="domingo">Domingo</option>
+      </select>
+
+      <label for="plano">Selecione o Plano:</label>
+      <select id="plano" name="plano" required>
+        <option value="mensal">Mensal</option>
+        <option value="bimestral">Bimestral</option>
+        <option value="trimestral">Trimestral</option>
+      </select>
+
+      <div class="cupom-container">
+        <label for="cupom">Código do Cupom de Desconto:</label>
+        <input type="text" id="cupom" name="cupom" value="TRIMESTRAL25" readonly>
+      </div>
+
+      <button type="button" id="enviarBtn">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <nav class="navfooter">
+      <ul class="ulfooter">
+        <a class="a-footer" href="https://linktr.ee/s/join-linktree-pro-for-free-ga/?&utm_source=google&utm_medium=cpc&utm_campaign=BAU_BR_Google_Search_Brand_Intent_Local&utm_term=linktree&utm_content=BAU_BR_Google_Search_Brand_Intent_Local_Linktree&gclid=Cj0KCQjw9rSoBhCiARIsAFOiplnJOtjPwLhA8yp1ezIN50sH8hXZOC_3zscL8-PjiDDbopWAQgpA8WQaAhPeEALw_wcB&gclsrc=aw.ds"
+          target="_blank">SIGA-NOS NAS REDES SOCIAIS <br />Fique por dentro das nossas novidades.<img src="img/socialmidia.png" alt=""
+        /></a>
+        <a href="perguntasfrequentes.html"><img src="img/faqs.png" alt="perguntasfrequentes" width="50%"></a>
+        <p class="footer-p">
+          Todos os direitos reservados a Mi Au PetShop 2023 Desenvolvimento - Agência de Marketing Digital Alunos Proz - Turma2
+        </p>
+        <p class="footer-p">
+          CONTATE-NOS <br />R. Proz, 67 São Paulo, Tel.:(11)2334-5566 WhatsApp.:(11)91234-5678 Segunda à Sábado das 9h ás 18h
+        </p>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    document.getElementById("plano").addEventListener("change", function() {
+      var cupomContainer = document.querySelector('.cupom-container');
+      var planoSelecionado = this.value;
+
+      // Exibe o campo de cupom apenas se o plano for trimestral
+      cupomContainer.style.display = planoSelecionado === 'trimestral' ? 'block' : 'none';
+    });
+
+    document.getElementById("enviarBtn").addEventListener("click", function() {
+   
+      alert("Formulário enviado com sucesso!");
+    });
+  </script>
+
+</body>
+</html>
+
