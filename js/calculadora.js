@@ -46,6 +46,17 @@ const data = [
   const calcBtn = document.querySelector("#calc-btn");
   const clearBtn = document.querySelector("#clear-btn");
 
+  const calcContainer = document.querySelector("#calc-container");
+  const resultContainer = document.querySelector("#result-container");
+  
+  const imcNumber = document.querySelector("#imc-number span");
+  const imcInfo = document.querySelector("#imc-info span");
+
+  const backBtn = document.querySelector("#back-btn");
+
+
+
+
   //Funções
 
   function createTable(data) {
@@ -74,6 +85,8 @@ const data = [
   function cleanIputs()  {
     heightInput.value = "";
     weightInput.value = "";
+    imcNumber.className = "";
+    imcInfo.className = "";
   }
   
   function validDigits(text) {
@@ -87,6 +100,11 @@ const data = [
   return imc;
 }
 
+  }
+
+  function showOrHideResults() {
+    calcContainer.classList.toggle("hide");
+    resultContainer.classList.toggle("hide");
   }
 
   // Inicialização
@@ -112,7 +130,46 @@ const data = [
     if (!weight || !height) return;
     
     const imc = calcImc(height, weight);
-    console.log(imc);
+    
+    let info
+
+    data.forEach((item) => {
+      if (imc >= item.min && imc <= item.max) {
+        info = item.info;
+      }
+    });   
+
+    if (!info) return;
+
+    imcNumber.innerText = imc;
+    imcInfo.innerText = info;
+
+    switch (info) {
+      case "Magreza":
+        imcNumber.classList.add("low");
+        imcInfo.classList.add("low");
+        break;
+      case "Normal":
+        imcNumber.classList.add("good");
+        imcInfo.classList.add("good");
+        break;
+      case "Sobrepeso":
+        imcNumber.classList.add("low");
+        imcInfo.classList.add("low");
+        break;
+      case "Obesidade":
+        imcNumber.classList.add("medium");
+        imcInfo.classList.add("medium");
+        break;
+      case "Obesidade grave":
+        imcNumber.classList.add("high");
+        imcInfo.classList.add("high");
+        break;
+    }
+  
+
+    showOrHideResults();
+
 
   })
 
@@ -121,6 +178,11 @@ const data = [
     e.preventDefault(); 
 
     cleanIputs();
+  });
+
+  backBtn.addEventListener("click", () => {
+    cleanIputs();
+    showOrHideResults();
   });
   
 
