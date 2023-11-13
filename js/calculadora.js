@@ -2,39 +2,33 @@
 const data = [
     {
       min: 0,
-      max: 18.4,
-      classification: "Menor que 18,5",
+      max: 11.7,
+      classification: "Menor que 11,7",
       info: "Abaixo do peso",
       obesity: "0",
     },
     {
-      min: 18.5,
-      max: 24.9,
-      classification: "Entre 18,5 e 24,9",
+      min: 11.8,
+      max: 15.0,
+      classification: "Entre 11,8 e 15,0",
       info: "Normal",
       obesity: "0",
     },
     {
-      min: 25,
-      max: 29.9,
-      classification: "Entre 25,0 e 29,9",
-      info: "Sobrepeso",
+      min: 15.1,
+      max: 18.6,
+      classification: "Entre 15,1 e 18,6",
+      info: "Acima do Peso",
       obesity: "I",
     },
     {
-      min: 30,
+      min: 18.7,
       max: 39.9,
-      classification: "Entre 30,0 e 39,9",
-      info: "Obesidade",
+      classification: "Acima de 18,7",
+      info: "Obeso",
       obesity: "II",
     },
-    {
-      min: 40,
-      max: 99,
-      classification: "Maior que 40,0",
-      info: "Obesidade grave",
-      obesity: "III",
-    },
+    
   ];
 
   // Seleção de elementos
@@ -94,7 +88,7 @@ const data = [
   }
 
   function calcImc(height, weight) {
-    const imc = (weight / (height * height)).toFixed(1);
+    const imc = (weight / (height ** -2)).toFixed(1);
     return imc;
   }
 
@@ -141,26 +135,23 @@ const data = [
     imcInfo.innerText = info;
 
     switch (info) {
-      case "Magreza":
-        imcNumber.classList.add("low");
-        imcInfo.classList.add("low");
+      case "Abaixo do peso":
+        imcNumber.classList.add("medium");
+        imcInfo.classList.add("medium");
         break;
       case "Normal":
         imcNumber.classList.add("good");
         imcInfo.classList.add("good");
         break;
-      case "Sobrepeso":
+      case "Acima do Peso":
         imcNumber.classList.add("low");
         imcInfo.classList.add("low");
         break;
-      case "Obesidade":
-        imcNumber.classList.add("medium");
-        imcInfo.classList.add("medium");
-        break;
-      case "Obesidade grave":
+      case "Obeso":
         imcNumber.classList.add("high");
         imcInfo.classList.add("high");
         break;
+      
     }
   
 
