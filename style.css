@@ -15,9 +15,9 @@ a {
 footer {
     background-color: #333333;
 }
-/*body {
+body {
   cursor: none;
-}*/
+}
 
 
 .cursor {
@@ -27,7 +27,7 @@ footer {
   height: 56px;
   position: absolute;
   background-image: url(img/cursor.png);
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
 }
 
 .header {
