@@ -53,14 +53,19 @@
     .cupom-container {
       display: none;
     }
+    .planos-container {
+    background-color: #37AFAA;
+      padding: 20px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Cadastro de Pet</h1>
+    <h1>💫 Cadastro Black Friday<br> Inscreva seu Pet para Experiências Exclusivas de Banho e Tosa!</h1>
     <div class="container" id="main-container">
-      <a href="banho_e_tosa.html" class="back-link">
+      <a href="banho_e_tosa.html" class="back-link" style="color: white;">
         <i class="fas fa-arrow-left"></i> Voltar
       </a>
     </div>
@@ -124,7 +129,15 @@
       <button type="button" id="enviarBtn">Enviar</button>
     </form>
   </section>
+  <div class="planos-container">
 
+    <h2>Planos Disponíveis</h2>
+    <ul>
+      <li><strong>Plano Mensal:</strong> Banho e tosa 1 vez por semana, sendo 4 ao mês - R$ 250,00</li>
+      <li><strong>Plano Bimestral:</strong> Banho e tosa 1 vez por semana, sendo 8 ao bimestre + Penteado com laço - R$ 500,00</li>
+      <li><strong>Plano Trimestral 25% OFF:</strong> Banho e tosa 1 vez por semana, sendo 12 por trimestre+ 01 limpeza de tártaro + Penteado com laço - R$ 562,00</li>
+    </ul>
+  </div>
   <footer>
     <nav class="navfooter">
       <ul class="ulfooter">
@@ -153,7 +166,7 @@
 
     document.getElementById("enviarBtn").addEventListener("click", function() {
    
-      alert("Formulário enviado com sucesso!");
+      alert("Formulário enviado com sucesso! Em breve entraremos em contato");
     });
   </script>
 
