@@ -342,7 +342,9 @@ font-weight: 800;
 
  .high {
   color: #db1912;
- }  
+ } 
+
+/*container banho e tosa*/
 
  .container {
   text-align: center;
@@ -358,7 +360,47 @@ font-weight: 800;
   margin: 10px 0;
 }
 
-  
+#cadastro-container {
+  display: none;
+  /* Adicione outros estilos conforme necessário */
+}
+
+#cadastro-container h2 {
+  color: #333; /* Cor do texto do título */
+}
+
+#cadastro-form {
+  margin-top: 20px; /* Espaçamento superior para o formulário */
+}
+
+#cadastro-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#cadastro-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  /* Adicione outros estilos conforme necessário */
+}
+
+#cadastro-form button {
+  background-color: #4caf50; /* Cor de fundo verde */
+  color: #fff; /* Cor do texto branco */
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  /* Adicione outros estilos conforme necessário */
+}
+
+#cadastro-form button:hover {
+  background-color: #45a049; /* Cor de fundo verde escuro no hover */
+  /* Adicione outros estilos conforme necessário */
+}
+
 
   
 
