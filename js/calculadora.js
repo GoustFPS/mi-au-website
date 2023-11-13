@@ -52,7 +52,7 @@ const data = [
 
 
   //Funções
-
+  //função que cria a tabela percorrendo cada item: linha e coluna da tabela;
   function createTable(data) {
        data.forEach((item) => {
            const div = document.createElement("div");
@@ -76,6 +76,7 @@ const data = [
        });    
   }
   
+  //função de limpeza de valores;
   function cleanIputs()  {
     heightInput.value = "";
     weightInput.value = "";
@@ -83,15 +84,17 @@ const data = [
     imcInfo.className = "";
   }
   
+  //controle da entrada de usuário, aceitando somente números;
   function validDigits(text) {
     return text.replace(/[^0-9,]/g, "");
   }
-
+  
+  //calculando o imc e gerando um valor com uma casa decimal;
   function calcImc(height, weight) {
     const imc = (weight / (height ** -2 )).toFixed(1);
     return imc;
   }
-
+  // mostrando resultados;
   function showOrHideResults() {
     calcContainer.classList.toggle("hide");
     resultContainer.classList.toggle("hide");
@@ -101,8 +104,9 @@ const data = [
   createTable(data);
 
 
-  // Eventos
+  // Eventos:
 
+  // evento para detectar modificações no input
   [heightInput, weightInput].forEach((el) => {
     el.addEventListener("input", (e) => {
       const updatedValue = validDigits(e.target.value);
@@ -111,9 +115,10 @@ const data = [
     });
   });
 
+  //cálculo
   calcBtn.addEventListener("click", (e) => {
     e.preventDefault();
-
+    // conversão de vírgulas em ponto e texto em tipo número
     const weight = +weightInput.value.replace(",", ".")
     const height = +heightInput.value.replace(",", ".")
 
@@ -133,7 +138,8 @@ const data = [
 
     imcNumber.innerText = imc;
     imcInfo.innerText = info;
-
+    
+    //exibindo feedback ao usuário em cores;
     switch (info) {
       case "Abaixo do peso":
         imcNumber.classList.add("medium");
@@ -160,13 +166,13 @@ const data = [
 
   })
 
-
+  //evento de limpeza de imputs
   clearBtn.addEventListener("click", (e) => {
     e.preventDefault(); 
 
     cleanIputs();
   });
-
+  //botão de voltar para o início;
   backBtn.addEventListener("click", () => {
     cleanIputs();
     showOrHideResults();
