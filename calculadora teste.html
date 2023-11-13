@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC para Animais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #resultado {
+      margin-top: 16px;
+    }
+
+    #imc-table {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .table-data {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="calculator">
+    <h2>Calculadora de IMC para Animais</h2>
+    <label for="weight">Peso (kg):</label>
+    <input type="text" id="weight" placeholder="Digite o peso em kg">
+
+    <label for="height">Altura (m):</label>
+    <input type="text" id="height" placeholder="Digite a altura em metros">
+
+    <button id="calc-btn">Calcular IMC</button>
+    <button id="clear-btn">Limpar</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <div id="imc-table" class="calculator">
+    <!-- Tabela IMC será gerada dinamicamente pelo JavaScript -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const data = [
+        {
+          min: 0,
+          max: 18.4,
+          classification: "Menor que 18,5",
+          info: "Abaixo do peso",
+          obesity: "0",
+        },
+        {
+          min: 18.5,
+          max: 24.9,
+          classification: "Entre 18,5 e 24,9",
+          info: "Normal",
+          obesity: "0",
+        },
+        {
+          min: 25,
+          max: 29.9,
+          classification: "Entre 25,0 e 29,9",
+          info: "Sobrepeso",
+          obesity: "I",
+        },
+        {
+          min: 30,
+          max: 39.9,
+          classification: "Entre 30,0 e 39,9",
+          info: "Obesidade",
+          obesity: "II",
+        },
+        {
+          min: 40,
+          max: 99,
+          classification: "Maior que 40,0",
+          info: "Obesidade grave",
+          obesity: "III",
+        },
+      ];
+
+      const imcTable = document.querySelector("#imc-table");
+      const heightInput = document.querySelector("#height");
+      const weightInput = document.querySelector("#weight");
+      const calcBtn = document.querySelector("#calc-btn");
+      const clearBtn = document.querySelector("#clear-btn");
+      const resultDiv = document.querySelector("#resultado");
+
+      function createTable(data) {
+        data.forEach((item) => {
+          const div = document.createElement("div");
+          div.classList.add("table-data");
+
+          const classification = document.createElement("p");
+          classification.innerText = item.classification;
+
+          const info = document.createElement("p");
+          info.innerText = item.info;
+
+          const obesity = document.createElement("p");
+          obesity.innerText = item.obesity;
+
+          div.appendChild(classification);
+          div.appendChild(info);
+          div.appendChild(obesity);
+
+          imcTable.appendChild(div);
+        });
+      }
+
+      function cleanInputs() {
+        heightInput.value = "";
+        weightInput.value = "";
+      }
+
+      function validDigits(text) {
+        return text.replace(/[^0-9,]/g, "");
+      }
+
+      function calcImc(height, weight) {
+        const imc = (weight / (height * height)).toFixed(1);
+        return imc;
+      }
+
+      createTable(data);
+
+      [heightInput, weightInput].forEach((el) => {
+        el.addEventListener("input", (e) => {
+          const updatedValue = validDigits(e.target.value);
+          e.target.value = updatedValue;
+        });
+      });
+
+      calcBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const weight = +weightInput.value.replace(",", ".");
+        const height = +heightInput.value.replace(",", ".");
+
+        if (!weight || !height) return;
+
+        const imc = calcImc(height, weight);
+        resultDiv.innerText = `Seu IMC é: ${imc}`;
+      });
+
+      clearBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        cleanInputs();
+        resultDiv.innerText = "";
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -80,9 +80,13 @@ const data = [
     return text.replace(/[^0-9,]/g, "");
   }
 
-  function calcImc(height, weight) {
-    const imc = (weight / (height * height)).toFixed(1);
-    return imc;
+ function calcImc(height, weight) {
+  // Ajuste a fórmula conforme necessário para a espécie de animal
+  // Exemplo: Peso (kg) / (Altura * Altura) para cães
+  const imc = (weight / (height * height)).toFixed(1);
+  return imc;
+}
+
   }
 
   // Inicialização
