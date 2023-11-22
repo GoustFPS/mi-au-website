@@ -139,7 +139,7 @@ const data = [
     imcNumber.innerText = imc;
     imcInfo.innerText = info;
     
-    //exibindo feedback ao usuário em cores;
+    //exibindo feedback ao usuário em cores
     switch (info) {
       case "Abaixo do peso":
         imcNumber.classList.add("medium");

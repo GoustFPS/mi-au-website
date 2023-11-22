@@ -27,7 +27,7 @@ footer {
   height: 56px;
   position: absolute;
   background-image: url(img/cursor.png);
-  mix-blend-mode: overlay;
+  /*mix-blend-mode: overlay;*/
 }
 
 .header {
