@@ -12,26 +12,12 @@
 <body>
 <div class="cursor"></div>
     <style type="text/css">
-    @media (max-width: 450px){ /*Responsividade*/
-        .atendimento {
-            flex-direction: column;
-            max-width: 960px;
-            justify-content: center;
-        }
-}
-    @media (min-width: 481px) and (max-width: 767px){ 
+        /*Responsividade*/
+
+    @media (min-width: 481px) and (max-width: 991px){ 
         .atendimento .delivery .formulario{
             display: flex;
             flex-direction: column;
-            max-width: 960px;
-            justify-content: center;
-        }
-    }
-    @media (min-width: 768px) and (max-width: 991px){ 
-        .atendimento .delivery .formulario{
-            display: flex;
-            flex-direction: column;
-            max-width: 960px;
             justify-content: center;
         }
     }
@@ -205,12 +191,12 @@
         <hr width="90%">
     </section>
 
-    <form action="" class="formulario">
+    <form class="formulario">
         <h1>Agende seu horário conosco!</h1>
         <img src="./img/img servicos/gato-atendente.png" alt="Gato no computador" width=350px align="right" style="padding-right: 23%;">
         <br>
         <ul >
-            <li > 
+            <li> 
                 <label for="usernamePet" ><strong >Nome do Pet:</strong></label>
                 <input type="text" name="usernamePet" id="usernamePet" placeholder="Digite o nome do pet" required>
                 <p id="usernamepet-helper" class="helper-text">Mensagem de ajuda</p>
