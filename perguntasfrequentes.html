@@ -23,7 +23,6 @@
               <a class="a-menu" href="aboutus.html">SOBRE NÓS</a>
               <a class="a-menu" href="banho_e_tosa.html">BANHO E TOSA</a>
               <a class="a-menu" href="servicos.html">SERVIÇOS</a>
-              <a class="a-menu" href="contatos.html">CONTATO</a>
               <a class="a-menu" href="imcpet.html">IMC-CÃO</a>
               >,
             </ul>
@@ -33,30 +32,69 @@
     </header>
     <div class="gallery-section">
       <a href="index.html" class="back-link">
-        <i class="fas fa-arrow-left"></i> Voltar
-      </a>
-    </div>
-    <h1>Perguntas Frequentes:</h1>
-    <div>
-      <ul>
-        <li>Como saber se a gata está grávida?</li>
-        <li>Como eliminar as pulgas?</li>
-        <li>Como eliminar os carrapatos?</li>
-        <li>Como é feito o diagnóstico da Leishmaniose?</li>
-        <li>Como tratar lesões em cães e gatos?</li>
-        <li>Suplemento para pets: o que é, quando e como usar?</li>
-        <li>
-          Existe risco em administrar remédios sem recomendação veterinária?
-        </li>
-        <li>Quais são os cuidados odontológicos para os PET?</li>
-        <li>
-          Como detectar e qual é o tratamento para câncer em cães e gatos?
-        </li>
-        <li>Devo ou não castrar meu pet?</li>
-      </ul>
-    </div>
+        <i class="fas fa-arrow-left"></i> Voltar 
+      </a> 
 
-    <footer>
+    </div>
+    <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 20px;
+      }
+      .faq-question {
+          cursor: pointer;
+          margin-bottom: 10px;
+          font-weight: bold;
+          color: rgb(215, 108, 108);
+        
+      }
+      .faq-answer {
+          display: none;
+      }
+
+      .faq-answer p {
+            margin: 0
+  </style>
+    <h1>Perguntas Frequêntes</h1>
+
+<div class="faq-container">
+    <div class="faq-question" onclick="toggleAnswer('products-services')">Quais são os produtos e serviços oferecidos pelo MIAU Pet Shop?</div>
+    <div class="faq-answer" id="products-services">Oferecemos uma variedade de produtos pet, incluindo alimentos, brinquedos e acessórios. Além disso, fornecemos serviços de banho e tosa, bem como atendimento veterinário.</div>
+
+    <div class="faq-question" onclick="toggleAnswer('pet-food-brands')">Quais marcas de alimentos para animais vocês vendem?</div>
+    <div class="faq-answer" id="pet-food-brands">Trabalhamos com diversas marcas renomadas de alimentos para animais, incluindo: Royal Canin, Balance, Dog Chow, Special Dog, Premier Pet, Magnus Pet, Whiskas, Hill's Pet, Pedigree e Gran Plus. </div>
+
+    <div class="faq-question" onclick="toggleAnswer('veterinary-appointment')">Como posso marcar uma consulta com um veterinário?</div>
+    <div class="faq-answer" id="veterinary-appointment">Para marcar uma consulta com um veterinário, entre em contato conosco durante o horário comercial de segunda a sábado, das 9:00 às 18:00. Estamos prontos para atendê-lo e agendar uma consulta para o seu animal de estimação.</div>
+
+    <div class="faq-question" onclick="toggleAnswer('imc-dog')">O que é o IMC-cão?</div>
+    <div class="faq-answer" id="imc-dog">O IMC-cão, ou Índice de Massa Corporal para cães, é uma medida que avalia o peso relativo de um cão em relação à sua altura. Essa métrica é utilizada para monitorar a saúde e o peso ideal do animal. É calculado dividindo o peso do cão pela altura ao quadrado. Manter um IMC-cão saudável é crucial para o bem-estar do seu pet. Se precisar de orientações específicas para o seu cão, consulte nossos veterinários especializados.</div>
+    
+    <div class="faq-question" onclick="toggleAnswer('loyalty-program')">Vocês têm programas de fidelidade ou descontos para clientes frequentes?</div>
+    <div class="faq-answer" id="loyalty-program">Sim, oferecemos um programa de fidelidade para clientes frequentes. Ao participar, você pode desfrutar de descontos exclusivos, ofertas especiais e acumular pontos para futuras compras.</div>
+    
+    <div class="faq-question" onclick="toggleAnswer('return-policy')">Qual é a política de devolução de produtos?</div>
+    <div class="faq-answer" id="return-policy">Aceitamos devoluções de produtos em até 30 dias a partir da data da compra. Os produtos devem estar sem uso e em sua embalagem original. Entre em contato conosco para obter mais detalhes e instruções sobre o processo de devolução.</div>
+
+    <div class="faq-question" onclick="toggleAnswer('delivery')">Vocês entregam produtos em domicílio?</div>
+    <div class="faq-answer" id="delivery">Sim, oferecemos entrega em domicílio para a sua comodidade. Consulte-nos para obter informações sobre áreas atendidas, prazos de entrega e eventuais taxas associadas.</div>
+
+    <div class="faq-question" onclick="toggleAnswer('emergency-contact')">Como posso entrar em contato em caso de emergência fora do horário comercial?</div>
+    <div class="faq-answer" id="emergency-contact">Fora do horário comercial, estamos disponíveis para emergências. Entre em contato conosco através do plantão de domingo no telefone (11) 2334-5566.</div>
+</div>
+
+<script>
+    function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            answer.style.display = 'block';
+        }
+    }
+</script>
+
+        <footer>
       <nav class="navfooter">
         <ul class="ulfooter">
           <a
